@@ -1,0 +1,138 @@
+#main {
+  text-align: left;
+  justify-items: auto;
+}
+
+.sell {
+  padding: 3.75rem 7rem 18.75rem 7rem;
+}
+
+.sell h1 {
+  padding-bottom: 1rem;
+}
+
+form {
+  display: grid;
+  min-width: 800px;
+  grid-template-areas: 'name name . .'
+                       'price price quantity quantity'
+                       'description description description description'
+                       '. . . submit';
+  font-size: inherit;
+}
+
+form input {
+  width: 100%;
+}
+
+select {
+  background-color: hsla(0, 0%, 100%, 1);
+  font-size: inherit;
+  display: block;
+}
+
+textarea {
+  min-height: 5rem;
+  font-size: inherit;
+}
+
+#name {
+  grid-area: name;
+  padding-right: 50px;
+}
+
+#price {
+  grid-area: price;
+  justify-content: flex-start;
+}
+
+.usd {
+  padding: 5px 10px 0 20px;
+  color: #999;
+  font-weight: 700;
+  line-height: 2.5;
+  border: 1px solid var(--dark-grey);
+  border-right: 0;
+  border-radius: 5px 0 0 5px;
+  width: 50px;
+  background-color: var(--light-grey);
+}
+
+.InputAddOn {
+  display: flex;
+  flex-direction: row;
+}
+
+.InputAddOn__field, .InputAddOn__select {
+  flex: 1;
+  -webkit-box-flex: 1;
+}
+
+.price--format {
+  text-align: right;
+  padding-right: 15px;
+  margin: 0;
+  max-width: 200px;
+  border: 1px solid #ccc;
+  border-left: 0;
+  background-color: hsla(0, 0%, 100%, 1);
+}
+
+.InputAddOn__field:last-child, .sgd:last-child {
+  border-radius: 0 5px 5px 0;
+}
+
+.InputAddOn__field:not(:first-child) {
+  border-left: 0;
+}
+
+#quantity {
+  grid-area: quantity;
+}
+
+.InputAddOn__select:first-child, .InputAddOn__sortdown:first-child {
+  border-radius: 5px 0 0 5px;
+}
+
+.InputAddOn__select:not(:last-child) {
+  border-right: 0;
+}
+
+#description {
+  grid-area: description;
+}
+
+#submit {
+  grid-area: submit;
+  justify-self: end;
+}
+
+@media only screen and (max-width: 1100px) {
+  .sell {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+@media only screen and (max-width: 970px) {
+  form {
+    grid-template-areas: 'name name'
+                         'price quantity'
+                         'description description'
+                         '. submit';
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  form {
+    grid-template-areas: 'name'
+                         'price'
+                         'quantity'
+                         'description'
+                         'submit';
+  }
+
+  #submit {
+    justify-self: center;
+  }
+}

@@ -1,0 +1,131 @@
+.shopping-cart {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(4, 1fr);
+  grid-column-gap: 3rem;
+  border: 1px solid var(--border-grey);
+  padding: 2rem 1rem;
+  background-color: var(--pure-white);
+}
+
+.shopping-cart__row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column: 1/4;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border-grey);
+  margin-left: 1.5rem;
+  position: relative;
+}
+
+#no-border {
+  border-bottom: none;
+}
+
+.shopping-cart__row i {
+  position: absolute;
+  left: 97%;
+  top: 5%;
+  background-color: var(--pure-white);
+  border-radius: 50%;
+}
+
+.shopping-cart__row a i {
+  color: var(--tomato);
+  transition: ease-in-out .2s;
+}
+
+.shopping-cart__row a:hover i {
+  color: var(--highlight-gray);
+}
+
+.shopping-cart__row--border {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column: 1/4;
+  padding: 1.5rem 1rem;
+  border: 1px solid var(--dark-grey);
+  border-radius: 1%;
+  background-color: var(--light-grey);
+}
+
+.shopping-cart__row--link {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column: 1/3;
+}
+
+.product__list__item--description {
+  padding-top: 0;
+}
+
+.shopping-cart__row--quantity span {
+  color: var(--heading-black);
+  font-weight: 700;
+}
+
+.shopping-cart__row--quantity input {
+  width: 3rem;
+  padding-left: 1rem;
+  margin-left: 1rem;
+}
+
+.shopping-cart__total {
+  grid-column: 4;
+  grid-row: 1/4;
+  border-left: 1px solid var(--border-grey);
+  margin: 1.5rem 1rem;
+  padding: 1rem 1rem;
+}
+
+.total__description {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.total__description h3 {
+  float: left;
+}
+
+.total--price {
+  float: right;
+  padding-bottom: 2rem;
+  color: var(--dark-gray);
+  font-size: 1.5rem;
+}
+
+.total__description:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#main .button {
+  box-sizing: border-box;
+  padding: 0.875rem 5rem;
+  margin-left: 1rem;
+}
+
+#main .button:hover {
+  transition: ease-in .5s;
+  letter-spacing: 0;
+}
+
+@media only screen and (max-width: 1020px) {
+  .landing .product-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+@media only screen and (max-width: 760px) {
+  .landing .product-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media only screen and (max-width: 470px) {
+  .landing .product-list {
+    grid-template-columns: 1fr;
+  }
+}
