@@ -1,5 +1,5 @@
 /*******************************************************
- * Copyright (C) 2018 Jasmine Lee <jasmineleecheowching@gmail.com>
+ * Copyright (C) 2018 Seyi Mike <oluseyi.mikeg@gmail.com>
  * 
  * This repository is part of the author's personal project completed under the course: "Codecademy Pro Intensive: Building UIs".
  * 
